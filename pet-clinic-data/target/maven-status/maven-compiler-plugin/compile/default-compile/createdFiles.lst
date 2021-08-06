@@ -1,5 +1,4 @@
+com\springframework\sfgpetclinic\model\Pet.class
 com\springframework\sfgpetclinic\model\Person.class
 com\springframework\sfgpetclinic\model\Owner.class
 com\springframework\sfgpetclinic\model\PetType.class
-com\springframework\sfgpetclinic\model\Pet.class
-com\springframework\sfgpetclinic\model\Vat.class

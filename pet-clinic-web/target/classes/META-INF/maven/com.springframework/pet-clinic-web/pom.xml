@@ -1,21 +1,23 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>com.springframework</groupId>
 		<artifactId>sfg-pet-clinic</artifactId>
-		<version>0.0.3-SNAPSHOT</version>
+		<version>0.0.4</version>
 	</parent>
 
 	<artifactId>pet-clinic-web</artifactId>
 	<name>pet-clinic-web</name>
-	<description>Tis the web application part</description>
+	<description>This the web application part</description>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.springframework</groupId>
 			<artifactId>pet-clinic-data</artifactId>
-			<version>0.0.3-SNAPSHOT</version>
+			<version>0.0.4</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
