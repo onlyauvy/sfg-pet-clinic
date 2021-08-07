@@ -1,15 +1,16 @@
 package com.springframework.sfgpetclinic.service.map;
 
 import java.util.Set;
-
+import org.springframework.stereotype.Service;
 import com.springframework.sfgpetclinic.model.Vet;
-import com.springframework.sfgpetclinic.service.CrudService;
+import com.springframework.sfgpetclinic.service.VetService;
 
-public class VetServiceMap extends AbstraceMapService<Vet, Long> implements CrudService<Vet, Long> {
+@Service
+public class VetServiceMap extends AbstraceMapService<Vet, Long> implements VetService {
 
 	@Override
 	public Vet save(Vet object) {
-		return super.save(object.getId(), object);
+		return super.save(object);
 	}
 
 	@Override

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Pet Client Index</title>
+</head>
+<body>
+	<h1 th:text="'List of Owners'">List of Owners...</h1>
+	
+	<table>
+		<thead>
+			<tr>
+				<td>Id</td>
+				<td>First Name</td>
+				<td>Last Name</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="owner: ${owners}">
+				<td th:text=${owner?.id}>Id</td>
+				<td th:text=${owner?.firstName}>First Name</td>
+				<td th:text=${owner?.lastName}>Last Name</td>
+			</tr>
+		</tbody>
+	</table> 
+</body>
+</html>
