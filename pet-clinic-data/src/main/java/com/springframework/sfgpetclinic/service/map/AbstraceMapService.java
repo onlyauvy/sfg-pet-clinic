@@ -25,9 +25,13 @@ public abstract class AbstraceMapService<T extends BaseEntity, ID extends Long> 
 			if(object.getId()== null) {
 				object.setId(getNextId());
 			}
+			
+			map.put(object.getId(), object);
+		} else {
+			throw new RuntimeException("Object can not be null.");
 		}
 		
-		return map.put(object.getId(), object);
+		return object;
 	}
 
 	void deleteById(ID id) {

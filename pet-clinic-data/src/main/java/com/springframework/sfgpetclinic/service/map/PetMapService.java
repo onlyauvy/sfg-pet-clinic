@@ -2,18 +2,15 @@ package com.springframework.sfgpetclinic.service.map;
 
 import java.util.Set;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import com.springframework.sfgpetclinic.model.Pet;
-import com.springframework.sfgpetclinic.service.CrudService;
+import com.springframework.sfgpetclinic.service.PetService;
 
 @Service
-public class PetServiceMap extends AbstraceMapService<Pet, Long> implements CrudService<Pet, Long> {
-
-	@Override
-	public Pet save(Pet object) {
-		return super.save(object);
-	}
+@Profile({"default","map"})
+public class PetMapService extends AbstraceMapService<Pet, Long> implements PetService {
 
 	@Override
 	public Set<Pet> findAll() {
@@ -26,6 +23,11 @@ public class PetServiceMap extends AbstraceMapService<Pet, Long> implements Crud
 	}
 
 	@Override
+	public Pet save(Pet object) {
+		return super.save(object);
+	}
+
+	@Override
 	public void delete(Pet object) {
 		super.delete(object);
 	}
@@ -34,5 +36,4 @@ public class PetServiceMap extends AbstraceMapService<Pet, Long> implements Crud
 	public void deleteById(Long id) {
 		super.deleteById(id);
 	}
-
 }
