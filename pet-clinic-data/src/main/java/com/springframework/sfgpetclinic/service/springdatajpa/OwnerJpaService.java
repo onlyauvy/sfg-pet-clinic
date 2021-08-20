@@ -1,6 +1,7 @@
 package com.springframework.sfgpetclinic.service.springdatajpa;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -27,6 +28,7 @@ public class OwnerJpaService implements OwnerService{
 		this.petRepository = petRepository;
 		this.petTypeRepository = petTypeRepository;
 	}
+	
 
 	@Override
 	public Set<Owner> findAll() {
@@ -60,4 +62,9 @@ public class OwnerJpaService implements OwnerService{
 		return ownerRepository.findByLastName(lastName);
 	}
 
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        return ownerRepository.findAllByLastNameLike(lastName);
+    }
 }
